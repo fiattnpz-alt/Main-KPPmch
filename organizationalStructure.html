@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Override body background for this page only */
+        body {
+            background-color: #f7f9fc;
+            /* Light gray background to show cards */
+            color: #333333;
+        }
+
+        /* content card style */
+        .content-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin: 30px auto;
+            max-width: 1100px;
+            /* Slightly wider than text container normally */
+        }
+
+        /* Adjust text colors for white background */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .hero-title,
+        .section-title {
+            color: #0a192f;
+        }
+
+        p,
+        .hero-subtitle,
+        .about-desc {
+            color: #555555;
+        }
+    </style>
+</head>
+
+<body class="about-page">
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/circlelogo.png" alt="logo" style="width: 35px; margin-right: 10px;">
+                <span class="logo-text">
+                    โรงพยาบาลชุมชน <span class="highlight">เทศบาลเมืองกำแพงเพชร</span>
+                </span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a href="organizationalStructure.html"
+                            class="nav-link active">โครงสร้างองค์กร</a>
+                    </li>
+                    <li class="nav-item"><a href="GeneralSchedule.html" class="nav-link">ตารางตรวจโรคทั่วไป</a></li>
+                    <li class="nav-item"><a href="index.html#questions" class="nav-link">คำถามที่พบบ่อย</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">ติดต่อเรา</a></li>
+
+
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </nav>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title / Hero substitute -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 20px; text-align: center;">
+        <div class="container content-card" style="max-width: 1000px; margin: 0 auto;">
+
+
+            <div class="org-scroll-wrapper">
+                <div class="org-chart">
+                    <h1>โครงสร้างองค์กร</h1>
+                    <p>โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</p>
+                    <!-- Level 1: Mayor -->
+                    <div class="org-node-wrapper">
+                        <div class="org-node">
+                            <div class="img-frame">
+                                <img src="assets/mayor.png" alt="นายวุฒิชัย">
+                            </div>
+                            <p class="org-name">นายวุฒิชัย ศุภอรรถพานิช</p>
+                            <p class="org-role">นายกเทศมนตรีเมืองกำแพงเพชร</p>
+                        </div>
+                    </div>
+                    <div class="connector-line-v"></div>
+
+                    <!-- Level 2: Director 1 -->
+                    <div class="org-node-wrapper">
+                        <div class="org-node">
+                            <div class="img-frame">
+                                <img src="assets/director-1.png" alt="นางสาวพิชญา">
+                            </div>
+                            <p class="org-name">นางสาวพิชญา หงษ์สุตะเมธี</p>
+                            <p class="org-role">หัวหน้าฝ่ายบริหารงานทั่วไป</p>
+                        </div>
+                    </div>
+                    <div class="connector-line-v"></div>
+
+                    <!-- Level 3: Director 2 -->
+                    <div class="org-node-wrapper">
+                        <div class="org-node">
+                            <div class="img-frame">
+                                <img src="assets/director-2.png" alt="นางปัทมา">
+                            </div>
+                            <p class="org-name">นางปัทมา พวงมาลัย</p>
+                            <p class="org-role">หัวหน้าโรงพยาบาล</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="org-node"
+                        style="display: inline-block; width: auto; padding: 10px 20px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: #0a192f; margin: 20px 0;">
+                        <p style="color: #FFFFFF; margin: 0; font-size: clamp(0.9rem, 3.5vw, 1.1rem);">
+                            <strong>โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</strong>
+                        </p>
+                    </div>
+
+                    <div class="connector-line-v"></div>
+
+
+                    <div class="doctors-grid">
+
+                        <div class="org-node-wrapper">
+                            <div class="org-node">
+                                <div class="img-frame">
+                                    <img src="allaboutus/about-3.jpg" alt="นพ.กำชัย">
+                                </div>
+                                <p class="org-name">นพ.กำชัย รังสิมันต์ไพบูลย์</p>
+                                <p class="org-role">นายแพทย์</p>
+                            </div>
+                        </div>
+
+                        <div class="org-node-wrapper">
+                            <div class="org-node">
+                                <div class="img-frame">
+                                    <img src="allaboutus/about-5.jpg" alt="พญ.จริดา">
+                                </div>
+                                <p class="org-name">พญ.จริดา สันธิติพงศ์</p>
+                                <p class="org-role">แพทย์หญิง</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="org-node"
+                        style="display: inline-block; width: auto; padding: 10px 20px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: #0a192f; margin: 20px 0;">
+                        <p style="color: #FFFFFF; margin: 0; font-size: clamp(0.9rem, 3.5vw, 1.1rem);">
+                            <strong>ฝ่ายและแผนกงาน</strong>
+                        </p>
+                    </div>
+                    <br>
+
+                    <!-- Level 5: Split to 5 Branches -->
+                    <div class="tree-grid">
+                        <div class="tree-grid-feeder"></div>
+                        <!-- Main Bar is top: 0. -->
+
+                        <!-- Branch 1 -->
+                        <div class="tree-col">
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">งานรักษาพยาบาล</p>
+                                    <p class="org-role">นางสาวธฐรัศม์ชนม์ ชุติเวทย์คูิ <br>
+                                        นางสาว ณัฐธิดา ...</p>
+                                </div>
+                            </div>
+                            <div class="connector-line-v"></div>
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">เทคโนโลยีดิจิทัล</p>
+                                    <p class="org-role">นายชัยวุุฒ อิมแนม <br>
+                                        -ว่าง-</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Branch 2 -->
+                        <div class="tree-col">
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">งานส่งเสริมสุขภาพ</p>
+                                    <p class="org-role">นางสาวกุลสินี สาพาที <br>
+                                        นางสาวมณฑ์ศิริ กล่อมยัง <br>
+                                        พี่จงค์รักษ์ ... <br>
+                                        นางสาวอรทัย ... <br>
+                                        นางสาวพี่แอน ... <br>
+                                        ตุ๊กตา</p>
+                                </div>
+                            </div>
+                            <div class="connector-line-v"></div>
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">พนักงานจ้างทั่วไป</p>
+                                    <p class="org-role">นายสุรพงษ์ เหลี่ยมเคลือบ <br>
+                                        พี่ตุ่น <br>
+                                        นายอนุสรณ์ บรรดาล</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Branch 3 -->
+                        <div class="tree-col">
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">งานป้องกันและควบคุมโรค</p>
+                                    <p class="org-role">นางนิมารักษ์ กลิ่นบุบผา <br>
+                                        นางกีรติวดี ฉัตรหลวง</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Branch 4 -->
+                        <div class="tree-col">
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">แผนกการเงิน</p>
+                                    <p class="org-role">พี่นิตย์ <br>
+                                        นางสาวศิริโฉม ศรีจันทร์โฉม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Branch 5 -->
+                        <div class="tree-col">
+                            <div class="org-node-wrapper">
+                                <div class="org-node">
+                                    <p class="org-name">แผนธุรการ</p>
+                                    <p class="org-role">พี่ดาวใจ <br>
+                                        นางสาวทัศนีย์ เจริญรส</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <a href="index.html" class="btn-back">กลับหน้าหลัก</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <span class="logo-text">
+                            โรงพยาบาลชุมชน <span class="highlight">เทศบาลเมืองกำแพงเพชร</span>
+                        </span>
+                    </a>
+                    <p style="color: #FFFFFF; font-size: 16px;"><strong>ลิงก์ด่วน</strong></p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">หน้าแรก</a>
+                    <a href="About.html">เกี่ยวกับเรา</a>
+                    <a href="index.html#organizationalStructure.html">โครงสร้างองค์กร</a>
+                    <a href="index.html#contact">ติดต่อเรา</a>
+                    <a href="index.html#questions">คำถามที่พบบ่อย</a>
+                </div>
+                <p style="color: #FFFFFF; font-size: 16px;"><strong>บริการของเรา</strong></p>
+                <div class="footer-links">
+                    <a href="GeneralSchedule.html">ตารางตรวจโรคทั่วไป</a>
+                    <a href="HealthSchedule.html">ตารางแพทย์แผนจีน</a>
+                    <a href="Thai&AltSchedule.html">ตารางแพทย์แผนไทย</a>
+                    <a href="index.html#PatientRegister">ลงทะเบียน Telemedicine</a>
+                    <a href="https://kppmch-pregnantt.vercel.app/">คลินิกฝากครรภ์</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/kmch.kpp"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@kppmuch"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://line.me/R/ti/p/@614lwjzc?ts=12231156&oat_content=url"><i
+                            class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

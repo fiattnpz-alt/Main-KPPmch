@@ -1,0 +1,1241 @@
+/* CSS Variables */
+:root {
+    --bg-color: #0a192f;
+    --bg-secondary: #112240;
+    --text-main: #e6f1ff;
+    --text-secondary: #8892b0;
+    --accent-color: #64ffda;
+    --accent-hover: #4cc7aa;
+    --white: #ffffff;
+    --nav-height: 80px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Sarabun', 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.25;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border-color: var(--text-secondary);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+/* Header & Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+}
+
+.logo i {
+    color: var(--accent-color);
+}
+
+.nav-list {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.button-link {
+    padding: 8px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--accent-color);
+}
+
+.nav-link.button-link:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.nav-link.button-link::after {
+    display: none;
+}
+
+.nav-toggle,
+.nav-close {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--nav-height);
+    background-image: radial-gradient(circle at 70% 50%, #112240 0%, #0a192f 60%);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(136, 146, 176, 0.2);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.hero-image {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Services Section */
+.services {
+    background-color: var(--bg-secondary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-desc {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.service-link {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+    gap: 8px;
+}
+
+/* About Section */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-desc {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.about-list {
+    margin-bottom: 30px;
+}
+
+.about-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.about-list li i {
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--bg-secondary);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    background-color: var(--bg-color);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.contact-item p {
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: #020c1b;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(136, 146, 176, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    :root {
+        --nav-height: 70px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .hero-container,
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 35px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--bg-secondary);
+        padding: 50px;
+        transition: var(--transition);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .nav-menu.show {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .nav-toggle,
+    .nav-close {
+        display: block;
+    }
+
+    .nav-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    /* Responsive Helpers */
+    .mobile-text-center {
+        text-align: center !important;
+    }
+
+    .mobile-flex-column {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .mobile-full-width {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .mobile-padding-small {
+        padding: 20px 15px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 8vw, 2.2rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+    }
+
+    .contact-container {
+        padding: 30px 20px;
+    }
+}
+
+/* Organizational Chart Styles */
+/* Scroll wrapper */
+.org-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    /* overflow-x: auto;  <-- Moved to wrapper */
+    width: 100%;
+    min-width: 900px;
+    /* Force minimum width to keep alignment */
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* Space between nodes */
+    position: relative;
+    width: 100%;
+}
+
+.org-node-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.org-node {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: fit-content;
+    min-width: 120px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+    position: relative;
+    /* Ensure image fits */
+}
+
+.org-node .img-frame img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #64ffda;
+    margin-bottom: 10px;
+}
+
+.org-name {
+    font-weight: 600;
+    color: #0a192f;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.org-role {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Connectors */
+.connector-line-v {
+    width: 2px;
+    background-color: #64ffda;
+    height: 40px;
+    /* Standard vertical line height */
+    margin: 0 auto;
+}
+
+/* Horizontal bar that spans across multiple children */
+.connector-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+/* The actual horizontal line */
+.connector-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #64ffda;
+    z-index: 1;
+}
+
+/* Vertical lines dropping from the bar to each child */
+.connector-drop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.connector-drop::before {
+    content: '';
+    width: 2px;
+    height: 40px;
+    /* Distance from bar to node */
+    background-color: #64ffda;
+}
+
+/* Complex Merges/Splits Helpers */
+
+/* Complex Merges/Splits Helpers */
+
+/* Wrapper for the 2 Doctors - Grid Layout */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    /* Fixed width to control spacing */
+    position: relative;
+    padding-top: 20px;
+    /* Space for the top connector line */
+}
+
+/* Common Vertical Line Style */
+.line-vertical {
+    position: absolute;
+    width: 2px;
+    background-color: #64ffda;
+}
+
+/* Common Horizontal Line Style */
+.line-horizontal {
+    position: absolute;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* 1. Split from Parent to Doctors */
+/* Horizontal bar above doctors */
+.doctors-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    /* Center of first col (width 50%, center is 25% of total) */
+    right: 25%;
+    /* Center of second col */
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Vertical lines connecting each doctor to the bar above */
+.doctors-grid .org-node-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    /* Reach up to the bar */
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #64ffda;
+}
+
+/* 2. Merge from Doctors to Center */
+/* Container below doctors */
+.merge-container {
+    position: relative;
+    width: 600px;
+    /* Match doctors-grid width */
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+/* Horizontal line connecting the bottom centers of the two doctors */
+.merge-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    /* Match center of 1st doctor */
+    right: 25%;
+    /* Match center of 2nd doctor */
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Short vertical drops from each doctor to the merge line */
+.merge-container .drop-left {
+    position: absolute;
+    top: -20px;
+    /* Connect to doctor bottom */
+    left: 25%;
+    height: 20px;
+    width: 2px;
+    background-color: #64ffda;
+}
+
+.merge-container .drop-right {
+    position: absolute;
+    top: -20px;
+    right: 25%;
+    height: 20px;
+    width: 2px;
+    background-color: #64ffda;
+}
+
+/* Single vertical line down from the merge line to the next level */
+.merge-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #64ffda;
+}
+
+
+/* Tree Layout for the 5-column split */
+/* Switched to Grid to strictly enforce equal columns for perfect line alignment */
+.tree-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    min-width: 900px;
+    /* Ensure enough space for 5 columns on mobile (triggers scrolling) */
+    max-width: 1200px;
+    position: relative;
+    padding-top: 40px;
+    gap: 0;
+}
+
+/* Horizontal bar for the 5 split */
+/* 
+   Logic: 
+   With 5 equal flex items, their centers are at 10%, 30%, 50%, 70%, 90%.
+   We want the line to go from center of Item 1 (10%) to center of Item 5 (90%).
+   So left: 10% and right: 10%.
+*/
+.tree-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Vertical line from top-center to the bar */
+.tree-grid-feeder {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    height: 40px;
+    width: 2px;
+    background-color: #64ffda;
+}
+
+/* Vertical lines for each column from bar to node */
+.tree-col {
+    flex: 1;
+    /* Equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+    /* Use padding for spacing instead of gap */
+}
+
+.tree-col::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    /* Connect to bar */
+    left: 50%;
+    height: 40px;
+    width: 2px;
+    background-color: #64ffda;
+}
+
+/* Responsive Adjustments for Org Chart */
+.doctors-grid,
+.merge-container {
+    width: 100%;
+    min-width: 600px;
+    /* Keep minimum width for structure */
+}
+
+
+/* โค้ดปุ่มกลับหน้าหลัก */
+.btn-back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #3a7bd5;
+    /* สีน้ำเงินตั้งต้น */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+    /* ปรับฟอนต์ให้ดูดีขึ้น */
+    transition: all 0.3s ease;
+    /* ทำให้การเปลี่ยนสีนุ่มนวล */
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ (Hover) */
+.btn-back:hover {
+    background-color: #2159a7;
+    /* สีจะเข้มขึ้นเมื่อชี้ */
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาให้ดูมีมิติ */
+    transform: translateY(-2px);
+    /* ปุ่มลอยขึ้นเล็กน้อย */
+}
+
+/* --- LUXURY ANIMATIONS --- */
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(100, 255, 218, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(100, 255, 218, 0.2);
+    }
+}
+
+/* Scroll Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-up.is-visible {
+    animation-name: fadeInUp;
+}
+
+.fade-left.is-visible {
+    animation-name: fadeInLeft;
+}
+
+.fade-right.is-visible {
+    animation-name: fadeInRight;
+}
+
+/* Delays */
+.delay-100.is-visible {
+    animation-delay: 0.1s;
+}
+
+.delay-200.is-visible {
+    animation-delay: 0.2s;
+}
+
+.delay-300.is-visible {
+    animation-delay: 0.3s;
+}
+
+.delay-400.is-visible {
+    animation-delay: 0.4s;
+}
+
+.delay-500.is-visible {
+    animation-delay: 0.5s;
+}
+
+/* Enhanced Hover Effects */
+.service-card,
+.value-card img {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15) !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Hero Image Floating */
+.hero-image img {
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Glow on Hover */
+.btn-primary:hover {
+    animation: glowPulse 2s infinite;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Glassmorphism Enhancement */
+.service-card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(17, 34, 64, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* สำหรับหน้าจอคอมพิวเตอร์ (หน้าจอกว้าง) */
+.line-break {
+    display: inline;
+    /* ให้แสดงผลต่อกันในบรรทัดเดียว */
+}
+
+/* สำหรับหน้าจอมือถือ (หน้าจอแคบกว่า 768px) */
+@media (max-width: 768px) {
+    .line-break {
+        display: block;
+        /* สั่งให้ดีดลงมาขึ้นบรรทัดใหม่ */
+    }
+}
+
+/* ตกแต่งเพิ่มเติมเพื่อให้ไอคอนกับข้อความดูดี */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+/* Mobile Org Chart Refactor */
+@media screen and (max-width: 768px) {
+
+    /* Allow resizing */
+    .org-scroll-wrapper {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .org-chart {
+        min-width: 100%;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Stack Doctors */
+    .doctors-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        gap: 30px;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .doctors-grid::before {
+        display: none;
+    }
+
+    .doctors-grid .org-node-wrapper::before {
+        display: none;
+    }
+
+    /* Stack Tree Columns */
+    .tree-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        gap: 30px;
+        padding-top: 0;
+    }
+
+    .tree-grid::before {
+        display: none;
+    }
+
+    .tree-grid-feeder {
+        display: none;
+    }
+
+    .tree-col {
+        width: 100%;
+        padding: 0;
+    }
+
+    .tree-col::before {
+        display: none;
+    }
+
+    /* Add visual separators for stacked lists */
+    .tree-col {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px dashed #ddd;
+    }
+
+    .connector-line-v {
+        height: 20px;
+    }
+
+    /* Ensure nodes fit screen */
+    .org-node {
+        max-width: 100%;
+        width: auto;
+        min-width: auto;
+    }
+}
