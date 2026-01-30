@@ -433,6 +433,44 @@ p {
     font-size: 0.95rem;
 }
 
+.contact-item p {
+    font-size: 0.95rem;
+}
+
+/* Contact List Styling (New) */
+.contact-list {
+    list-style: none;
+    margin-bottom: 30px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    /* Align icon with top of text */
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.contact-list li i {
+    color: var(--accent-color);
+    /* #64ffda or similar from variables */
+    margin-top: 5px;
+    /* Adjust vertical alignment visually */
+    min-width: 25px;
+    /* Prevent squishing */
+    text-align: center;
+}
+
+.contact-list li span {
+    flex: 1;
+    /* Take remaining width */
+    word-break: break-word;
+    /* Ensure long emails/urls break */
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -664,6 +702,12 @@ p {
 
     .contact-container {
         padding: 30px 20px;
+    }
+
+    /* Fix footer links spacing */
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
