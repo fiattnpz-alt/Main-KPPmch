@@ -89,3 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+/* --- LINE POPUP --- */
+const linePopup = document.getElementById('line-popup');
+const closePopup = document.getElementById('close-popup');
+
+if (linePopup && closePopup) {
+    // Show popup after 1.5 seconds
+    setTimeout(() => {
+        linePopup.classList.add('show');
+    }, 1500);
+
+    // Close popup on button click
+    closePopup.addEventListener('click', () => {
+        linePopup.classList.remove('show');
+    });
+}
