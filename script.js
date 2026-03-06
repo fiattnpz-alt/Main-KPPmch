@@ -1,107 +1,104 @@
-/* Mobile Navigation */
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
-const navLinks = document.querySelectorAll('.nav-link');
-
-// Show Menu
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show');
-    });
-}
-
-// Hide Menu
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show');
-    });
-}
-
-// Close menu when clicking a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('show');
-    });
-});
-
-/* Header Background on Scroll */
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        header.style.backgroundColor = 'rgba(10, 25, 47, 0.95)'; // Keep consistent for this design or change to transparent if hero handles it
-        header.style.boxShadow = 'none';
-
-        // Optional: Transparent on very top if desired, but for this dark theme keeping it dark is safer
-        // To make it transparent at top:
-        // header.style.backgroundColor = 'transparent';
-    }
-});
-
-/* Active Link on Scroll */
-const sections = document.querySelectorAll('section[id]');
-
-function scrollActive() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 100; // Offset for header height
-        const sectionId = current.getAttribute('id');
-        const sectionLink = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
-
-        if (sectionLink) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                sectionLink.classList.add('active');
-            } else {
-                sectionLink.classList.remove('active');
-            }
-        }
-    });
-}
-
-
-window.addEventListener('scroll', scrollActive);
-
-/* --- ANIMATION OBSERVER --- */
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-        observer.observe(element);
+    // Lucide Icons
+    lucide.createIcons();
+
+    // FAQ Interaction
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            faqItems.forEach(faq => faq.classList.remove('active'));
+
+            // If it wasn't active before, open it
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
     });
+
+    // Mobile Menu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Optional: Change icon
+            const icon = mobileBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    }
+
+    // ============================================
+    // SCROLL REVEAL (INTERSECTION OBSERVER)
+    // ============================================
+    const revealElements = document.querySelectorAll('.animate-on-scroll, .footer-animate, .image-zoom-scroll');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Don't unobserve immediately if we want re-trigger (optional),
+                // but for "once" effect like Porsche, unobserve is fine.
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger early
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ============================================
+    // PARALLAX SCROLL EFFECT (MOVES WITH SCROLL)
+    // ============================================
+    // Add '.parallax-item' class to elements you want to move slower than scroll
+    const parallaxItems = document.querySelectorAll('.parallax-item');
+
+    if (parallaxItems.length > 0) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            parallaxItems.forEach(item => {
+                // Calculate position relative to viewport
+                const rect = item.getBoundingClientRect();
+                const itemTop = rect.top + scrollY;
+
+                // Only animate if near viewport
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    // Standard parallax: move 20% of scroll speed
+                    // Adjust speed factor (0.1 to 0.3) for intensity
+                    const speed = 0.1;
+                    const yPos = (scrollY - itemTop) * speed;
+
+                    // Apply check to avoid jitters
+                    if (Math.abs(yPos) < 100) { // Limit movement
+                        item.style.transform = `translateY(${yPos}px)`;
+                    }
+                }
+            });
+        }, { passive: true }); // Passive for performance
+    }
+
+
 });
-
-
-/* --- LINE POPUP --- */
-const linePopup = document.getElementById('line-popup');
-const closePopup = document.getElementById('close-popup');
-
-if (linePopup && closePopup) {
-    // Show popup after 1.5 seconds
-    setTimeout(() => {
-        linePopup.classList.add('show');
-    }, 1500);
-
-    // Close popup on button click
-    closePopup.addEventListener('click', () => {
-        linePopup.classList.remove('show');
-    });
-}
