@@ -2,529 +2,486 @@
 <html lang="th">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="assets/remove bg logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร (อนามัยวัดคูยาง) | KPPmch</title>
-    <meta name="description"
-        content="โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร หรือที่รู้จักในชื่อ อนามัย รร.วัดคูยาง ให้บริการตรวจรักษาโรคทั่วไป ฝากครรภ์ วัคซีน แพทย์แผนไทย แผนจีน Telemedicine ที่ 35 ซ.2 ถ.ราชดำเนิน 1 กำแพงเพชร โทร 055-716715">
-    <meta name="keywords"
-        content="โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร, อนามัยวัดคูยาง, อนามัย รร วัดคูยาง, KPPmch, โรงพยาบาลกำแพงเพชร, คลินิกกำแพงเพชร, เทศบาลเมืองกำแพงเพชร, ตรวจโรคกำแพงเพชร, แพทย์แผนไทยกำแพงเพชร">
-    <meta name="author" content="โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://kppmch-main.vercel.app/">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kppmch-main.vercel.app/">
-    <meta property="og:title" content="โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร (อนามัยวัดคูยาง)">
-    <meta property="og:description"
-        content="บริการสุขภาพครบวงจรเพื่อชุมชน ตรวจรักษาโรคทั่วไป ฝากครรภ์ วัคซีน แพทย์แผนไทย-จีน และ Telemedicine">
-    <meta property="og:image" content="https://kppmch-main.vercel.app/assets/circlelogo.png">
-    <meta property="og:locale" content="th_TH">
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร",
-      "alternateName": ["อนามัยวัดคูยาง", "อนามัย รร.วัดคูยาง", "KPPmch"],
-      "description": "โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร ให้บริการตรวจรักษาโรคทั่วไป ฝากครรภ์ วัคซีน แพทย์แผนไทย แผนจีน และ Telemedicine",
-      "url": "https://kppmch-main.vercel.app/",
-      "telephone": "055-716715",
-      "email": "prathomhealth@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "35 ซ.2 ถ.ราชดำเนิน 1",
-        "addressLocality": "ต.ในเมือง อ.เมืองกำแพงเพชร",
-        "addressRegion": "จ.กำแพงเพชร",
-        "postalCode": "62000",
-        "addressCountry": "TH"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:30",
-        "closes": "16:30"
-      },
-      "sameAs": [
-        "https://www.facebook.com/kmch.kpp",
-        "https://www.tiktok.com/@kppmuch"
-      ]
-    }
-    </script>
+    <title>ระบบลงทะเบียนออนไลน์ | Premium Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="assets/remove bg logo.png">
+    <link rel="stylesheet" href="animations.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
+    <div class="gradient-bg"></div>
 
-    <!-- Header / Navigation -->
-    <header class="header">
+    <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="assets/circlelogo.png" alt="logo" style="width: 35px; margin-right: 10px;">
-                <span class="logo-text">
-                    โรงพยาบาลชุมชน <span class="highlight">เทศบาลเมืองกำแพงเพชร</span>
-                </span>
+            <!-- Logo (Left) -->
+            <a href="index.html" class="logo"
+                style="display: flex; align-items: center; transform: scale(1.2); transform-origin: left;">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 35px; height: 35px;">
+                <span style="font-size: 12px;">บริการ Telemedicine<span class="text-gradient">
+                        <br> โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</span></span>
             </a>
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active">หน้าแรก</a></li>
-                    <li class="nav-item"><a href="About.html" class="nav-link">เกี่ยวกับเรา</a></li>
-                    <li class="nav-item"><a href="organizationalStructure.html" class="nav-link">โครงสร้างองค์กร</a>
-                    </li>
-                    <li class="nav-item"><a href="GeneralSchedule.html" class="nav-link">ตารางตรวจโรคทั่วไป</a></li>
-                    <li class="nav-item"><a href="#questions" class="nav-link">คำถามที่พบบ่อย</a></li>
-                    <li class="nav-item"><a href="index.html#contact" class="nav-link">ติดต่อเรา</a></li>
 
-
-                </ul>
-
-                <div class="nav-close" id="nav-close">
-                    <i class="fas fa-times"></i>
-                </div>
-            </nav>
-
-            <div class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+            <!-- Desktop Right Nav -->
+            <div class="nav-desktop-group right">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
             </div>
+
+            <div class="mobile-toggle" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+
+            <!-- Mobile Menu (Hidden on Desktop) -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">หน้าหลัก</a>
+                <a href="Whatis.html">คืออะไร?</a>
+                <a href="contact.html">ติดต่อเรา</a>
+                <a href="register.html">ลงทะเบียนทันที</a>
+            </nav>
         </div>
     </header>
 
-
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-on-scroll fade-up" style="margin-top: 50px;">
-                    โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</h1>
-                <p class="hero-title animate-on-scroll fade-up delay-100 highlight"
-                    style="font-size: clamp(1.2rem, 4vw, 1.5rem); margin-bottom: 15px;">
-                    บริการสุขภาพเพื่อชุมชน
-                    โดยเทศบาลเมืองกำแพงเพชร
-                </p>
-                <p class="hero-subtitle animate-on-scroll fade-up delay-200">
-                    เรามุ่งมั่นให้บริการดูแลสุขภาพที่ครอบคลุมแก่ประชาชนในพื้นที่
-                    ด้วยเทคโนโลยีที่ทันสมัยและทีมบุคลากรทางการแพทย์ผู้เชี่ยวชาญ
-                    เพื่อสร้างประสบการณ์ที่ดีและไร้ความกังวลสำหรับทุกคนในครอบครัว</p>
-                <div class="hero-buttons animate-on-scroll fade-up delay-300">
-                    <a href="About.html" class="btn btn-primary">เกี่ยวกับเรา</a>
-                </div>
-                <div class="hero-stats">
-                </div>
-            </div>
-            <div class="hero-image animate-on-scroll fade-right">
-                <img src="assets/hero-image.jpg" alt="hero-doctor"
-                    style="border-radius: 20px; display: block; margin: 0 auto; max-width: 100%; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="margin-top: 15px;">
-                    <p class="hero-doctor" style="color: #FFFFFF; font-weight: 500;">
-                        นางสาวพิชญา หงษ์สุตะเมธี
-                    </p>
-                    <p class="hero-kp highlight" style="font-size: 0.9rem; margin-top: 5px;">
-                        หัวหน้าฝ่ายบริหารงานทั่วไป (รักษาราชการแทน ผอ.กองสาธารณสุขฯ) </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="services section" id="services">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="section-title mobile-text-center" style="font-size: clamp(1.3rem, 5vw, 1.5rem);">
-                    เกี่ยวกับสถานพยาบาลของเรา
-                </h1>
-                <p class="section-subtitle highlight mobile-text-center"
-                    style="font-size: clamp(1rem, 4vw, 1.1rem); margin-top: 10px;">
-                    เราทุ่มเทเพื่อมอบประสบการณ์ด้านสุขภาพที่ดีที่สุด
-                    โดยให้ความสำคัญกับความสะดวกสบายและความเป็นอยู่ที่ดีของท่านเป็นอันดับแรก
-                </p>
-                <ul class="pregnancy-list">
-                    <li><i class="fas fa-check-circle"></i> ทันทีที่รู้ว่าตั้งครรภ์ หรืออย่างช้าที่สุดภายใน 12
-                        สัปดาห์แรก</li>
-                    <li><i class="fas fa-check-circle"></i>
-                        การตรวจครั้งแรกมีความสำคัญอย่างยิ่งในการประเมินความเสี่ยง</li>
-                    <li><i class="fas fa-check-circle"></i> ช่วยให้ตรวจพบและป้องกันภาวะแทรกซ้อนที่อาจเกิดขึ้นได้
-                    </li>
-                    <li><i class="fas fa-check-circle"></i> เพื่อให้คุณแม่และทารกในครรภ์ได้รับการดูแลที่ดีที่สุด
-                    </li>
-                </ul>
-            </div>
-            <div class="animate-on-scroll fade-up delay-200 mobile-full-width" style="
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 20px 30px; 
-    width: fit-content; 
-    max-width: 90%;
-    margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.1); 
-    color: #ffffff; 
-    border-radius: 15px; 
-    font-size: clamp(1.1rem, 4vw, 1.5rem); 
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-">
-                "มุ่งมั่นพัฒนา สู่โรงพยาบาลคุณภาพ เพื่อสุขภาพที่ดีของชุมชน"
-            </div>
-    </section>
-
-
-
-    <section class="about section" id="xxxxxxx"
-        style="background-color: #112240; padding: 60px 0; color: white; font-family: sans-serif;">
-        <div class="container content-card">
-
-            <div class="section-header animate-on-scroll fade-up" style="text-align: center; margin-bottom: 50px;">
-                <h2 class="section-title" style="font-size: 32px; color: #ffffff;">สิ่งที่เราให้ความสำคัญ
-                </h2>
-            </div>
-
-            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; text-align: center;">
-
-                <div class="animate-on-scroll fade-up" style="flex: 1; min-width: 280px; max-width: 350px;">
-                    <img src="value/value-1.jpg" alt="Value 1"
-                        style="width: 250px; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: #3a7bd5; margin-bottom: 5px;">
-                        <strong>เทคโนโลยีที่ทันสมัย</strong>
-                    </p>
-                    <p style="font-size: 1rem; line-height: 1.6; color: #ffffff;">
-                        อุปกรณ์ที่ล้ำสมัยช่วยให้การวินิจฉัยและรักษามีความแม่นยำและสะดวกสบาย
-                    </p>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <span
+                    class="badge badge-shimmer hero-animate hero-animate-delay-1">📞🏥🚑รักษาโรคออนไลน์ฮิวใจแค่ปลายนิ้ว</span>
+                <h1 style="font-size: 35px;" class="hero-animate hero-animate-delay-2">บริการการแพทย์ทางไกล<br><span
+                        class="text-gradient">Telemedicine</span></h1>
+                <div class="hero-btns hero-animate hero-animate-delay-3" style="margin-top: 20px;">
+                    <button class="btn btn-primary btn-lg"
+                        onclick="window.location.href='register.html';">ลงทะเบียนพบแพทย์ <i
+                            data-lucide="arrow-right"></i></button>
+                    <button class="btn btn-outline btn-lg"
+                        onclick="window.location.href='https://findappointment-telemedicinekppmch.vercel.app/';">ค้นหา-วันที่นัดหมาย</button>
                 </div>
 
-                <div class="animate-on-scroll fade-up" style="flex: 1; min-width: 280px; max-width: 350px;">
-                    <img src="value/value-2.jpg" alt="Value 2"
-                        style="width: 250px; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: #3a7bd5; margin-bottom: 5px;">
-                        <strong>การดูแลด้วยใจ</strong>
-                    </p>
-                    <p style="font-size: 1rem; line-height: 1.6; color: #ffffff;">
-                        เรามุ่งมั่นที่จะทำให้การมาโรงพยาบาลของท่านเป็นไปอย่างราบรื่นและน่าประทับใจ
-                    </p>
+        </section>
+
+        <section id="news" class="features-section">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+
+                    <div class="section-header" style="text-align: left; margin: 0px;">
+                        <span class="badge">📰ข่าวประชาสัมพันธ์</span>
+                        <p style="color: #ffff; margin-bottom: 5px;">กิจกรรมโครงการ Telemedicine เทศบาลเมืองกำแพงเพชร
+                        </p>
+                        <p style="margin-bottom: 0;">ดูรายละเอียดภาพกิจกรรมและข่าวสารเพิ่มเติม</p>
+                    </div>
+
+                    <div class="header-link">
+                        <button class="btn btn-outline btn-lg"
+                            onclick="window.location.href= 'https://www.kppmu.go.th/news-detail?hd=1&id=124000';">
+                            อ่านข่าวสารเพิ่มเติม &raquo;
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="hero-section">
+            <div class="container image-zoom-scroll parallax-item animate-on-scroll delay-2">
+                <img src="assets/telemed.png" alt="hero-image" class="hero-image"
+                    style="width: 80%; max-width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+            </div> <br>
+            <h2>บริการการแพทย์ทางไกล (Telemedicine) คืออะไร?</h2> <br>
+            <p class="hero-desc">Telemedicine
+                คือการนำเทคโนโลยีการสื่อสารมาประยุกต์ใช้ในการให้บริการด้านสาธารณสุข
+                เพื่อให้ผู้ป่วยและบุคลากรทางการแพทย์สามารถพูดคุย ปรึกษา วินิจฉัย
+                และติดตามการรักษาได้จากระยะไกล...<a href="Whatis.html" style="color:#38bdf8;">อ่านต่อ</a>
+            </p>
+            <button class="btn btn-outline btn-lg" onclick="window.location.href='Whatis.html';">ดูรายละเอียด</button>
+
+            </div>
+        </section>
+
+        <section id="steps" class="features-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>3 ขั้นตอนง่ายๆ ในการเข้ารับบริการ</h2>
+                    <p>เริ่มต้นประสบการณ์การดูแลสุขภาพยุคใหม่ได้ในไม่กี่ขั้นตอน</p>
+                </div>
+                <div class="steps-flow-container">
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="user"></i>
+                            <div class="step-number">1</div>
+                        </div>
+                        <h3>ลงทะเบียนและทำนัด</h3>
+                        <p>กรอกข้อมูลส่วนตัวและอาการเบื้องต้นเพื่อทำการนัดหมายพบแพทย์</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="phone-call"></i>
+                            <div class="step-number">2</div>
+                        </div>
+                        <h3>พบแพทย์ผ่านวิดีโอคอล</h3>
+                        <p>ปรึกษาปัญหาสุขภาพกับแพทย์ผู้เชี่ยวชาญผ่านระบบ <br>วิดีโอคอลที่ปลอดภัย</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="text"></i>
+                            <div class="step-number">3</div>
+                        </div>
+                        <h3>รับยาและเอกสาร</h3>
+                        <p>มารับยาและใบรับรองแพทย์ด้วยตนเองที่โรงพยาบาล (ยังไม่มีบริการส่งยาทางไปรษณีย์)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="features-section" style="background: transparent;">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>ข้อดีของบริการ Telemedicine</h2>
+                    <p>สัมผัสประสบการณ์การดูแลสุขภาพที่สะดวกสบายและเข้าถึงง่ายกว่าที่เคย</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card card-hover-lift animate-on-scroll delay-1">
+                        <div class="icon-box"><i data-lucide="home"></i></div>
+                        <h3>ความสะดวกสบาย</h3>
+                        <p>รับคำปรึกษาจากแพทย์ได้จากทุกที่ โดยไม่ต้องเสียเวลาเดินทางมาโรงพยาบาล</p>
+                    </div>
+                    <div class="feature-card card-hover-lift animate-on-scroll delay-2">
+                        <div class="icon-box"><i data-lucide="wallet"></i></div>
+                        <h3>ประหยัดเวลาและค่าใช้จ่าย</h3>
+                        <p>ลดค่าใช้จ่ายในการเดินทางและประหยัดเวลาที่ต้องใช้ในการรอคอยที่โรงพยาบาล</p>
+                    </div>
+                    <div class="feature-card card-hover-lift animate-on-scroll delay-3">
+                        <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                        <h3>ลดความเสี่ยง</h3>
+                        <p>ลดการสัมผัสและลดความเสี่ยงในการติดเชื้อต่างๆ โดยเฉพาะในสถานการณ์โรคระบาด</p>
+                    </div>
+                    <div class="feature-card card-hover-lift animate-on-scroll delay-4">
+                        <div class="icon-box"><i data-lucide="stethoscope"></i></div>
+                        <h3>การดูแลต่อเนื่อง</h3>
+                        <p>เหมาะสำหรับผู้ป่วยโรคเรื้อรังที่ต้องการติดตามอาการกับแพทย์อย่างสม่ำเสมอ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>สิทธิ์การรักษาและอัตราค่าบริการ</h2>
+                    <p>ตรวจสอบสิทธิ์การรักษาที่รองรับและอัตราค่าบริการเบื้องต้น</p>
+                </div>
+                <div class="steps-flow-container">
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="user" style="color: aqua;"></i>
+                        </div>
+                        <h3>สิทธิ์ข้าราชการ</h3>
+                        <p>สามารถเบิกจ่ายตรงได้ตามระเบียบกรมบัญชีกลาง (เฉพาะค่ายาและเวชภัณฑ์)</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="credit-card" style="color: gold;"></i>
+                        </div>
+                        <h3>สิทธิ์บัตรทอง (30 บาท)</h3>
+                        <p>ใช้สิทธิ์ได้เฉพาะผู้ที่มีสิทธิ์รักษาอยู่ที่โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <i data-lucide="coins" style="color: #76FF14;"></i>
+                        </div>
+                        <h3>ชำระเงินเอง</h3>
+                        <p>สำหรับผู้ที่ไม่มีสิทธิ์รักษาที่โรงพยาบาล หรือต้องการความสะดวกรวดเร็ว</p>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <button class="btn btn-primary btn-lg"
+                        onclick="window.location.href='https://srmcitizen.nhso.go.th/';">
+                        <i data-lucide="search"></i>ตรวจสอบสิทธิ์การรักษาได้ด้วยตนเองที่เว็บไซต์ของ สปสช.
+                    </button>
+                    <p style="margin-top: 10px;">* กรุณาตรวจสอบสิทธิ์การรักษาของท่านกับเจ้าหน้าที่ก่อนเข้ารับบริการ โทร.
+                        055-716-715</p>
                 </div>
 
-                <div style="flex: 1; min-width: 280px; max-width: 350px;">
-                    <img src="value/value-3.jpg" alt="Value 3"
-                        style="width: 250px; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: #3a7bd5; margin-bottom: 5px;">
-                        <strong>สะอาดและปลอดภัย</strong>
-                    </p>
-                    <p style="font-size: 1rem; line-height: 1.6; color: #ffffff;">
-                        ความปลอดภัยคือสิ่งที่เรายึดมั่น สถานพยาบาลของเรามีมาตรฐานความสะอาดสูงสุด
-                    </p>
+                <div class="container">
+                    <div style="max-width:900px; margin:20px auto; overflow-x:auto; -webkit-overflow-scrolling:touch;">
+                        <table style="
+      width:100%;
+      border-collapse:collapse;
+      font-family:Arial, sans-serif;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      border-radius:10px;
+      overflow:hidden;
+    ">
+                            <tr style="background:#0f172a; color:#fff;">
+                                <th style="padding:12px; text-align:left;text-align:center;">รายการ</th>
+                                <th style="padding:12px; text-align:left;text-align:center;">ค่าบริการ</th>
+                                <th style="padding:12px; text-align:left;text-align:center;">หมายเหตุ</th>
+                            </tr>
+
+                            <tr style="background:#1e2d52; color:#fff;">
+                                <td style="padding:10px;text-align:center;">ค่าบริการทางการแพทย์
+                                <td style="padding:10px;text-align:center;">50-100 บาท</td>
+
+                                <td style="padding:10px;text-align:center;">ขึ้นอยู่กับสิทธิ์การรักษา
+                                </td>
+                            </tr>
+                            <tr style="background:#1e2d52; color:#fff;">
+                                <td style="padding:10px;text-align:center;">ค่ายาและเวชภัณฑ์</td>
+                                <td style="padding:10px;text-align:center;">ตามจริง
+                                </td>
+
+                                <td style="padding:10px;text-align:center;">ชำระเงินเมื่อมารับยา
+                                </td>
+                            </tr>
+                            <tr style="background:#1e2d52; color:#fff;">
+                                <td style="padding:10px;text-align:center;">ค่าใบรับรองแพทย์</td>
+                                <td style="padding:10px;text-align:center;">100 - 200 บาท
+                                </td>
+
+                                <td style="padding:10px;text-align:center;">กรณีขอเพิ่มเติมนอกเหนือการรักษา
+                                </td>
+                            </tr>
+
+
+                        </table>
+                        <br>
+                        <p style="margin-top:5px;">
+                            * อัตราค่าบริการอาจมีการเปลี่ยนแปลง โปรดสอบถามเจ้าหน้าที่ก่อนเข้ารับบริการ<br>
+                            ** ผู้มีสิทธิ์บัตรทอง/ประกันสังคม สามารถใช้สิทธิ์ได้ตามเงื่อนไขของโรงพยาบาล</p>
+                    </div>
+                </div>
+        </section>
+
+
+        <section id="limitations" class="features-section" style="background: transparent;">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>ข้อจำกัดของบริการ Telemedicine</h2>
+                    <p>สัมผัสประสบการณ์การดูแลสุขภาพที่สะดวกสบายและเข้าถึงง่ายกว่าที่เคย</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="triangle-alert"></i></div>
+                        <h3>ภาวะฉุกเฉินทางการแพทย์</h3>
+                        <p>ไม่เหมาะสำหรับภาวะฉุกเฉินหรืออาการรุนแรงที่ต้องการการรักษาอย่างเร่งด่วน
+                            กรุณาติดต่อห้องฉุกเฉินโดยตรง
+                        </p>
+                    </div>
+                    <div class=" feature-card">
+                        <div class="icon-box"><i data-lucide="stethoscope"></i></div>
+                        <h3>การตรวจร่างกาย</h3>
+                        <p>แพทย์ไม่สามารถทำการตรวจร่างกายได้โดยตรง ซึ่งอาจเป็นข้อจำกัดในการวินิจฉัยบางโรค</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="clipboard-list"></i></div>
+                        <h3>การออกเอกสารบางประเภท
+                        </h3>
+                        <p>การออกใบรับรองแพทย์บางประเภทที่ต้องมีการตรวจร่างกายอย่างละเอียด
+                            อาจไม่สามารถทำผ่านระบบนี้ได้
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="hammer"></i></div>
+                        <h3>ปัญหาทางเทคนิค
+                        </h3>
+                        <p>คุณภาพของบริการขึ้นอยู่กับความเสถียรของอินเทอร์เน็ตและอุปกรณ์ของท่าน</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="faq" class="faq-section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>คำถามที่พบบ่อย (FAQ)</h2>
+                    <p>รวบรวมคำถามที่พบบ่อยเพื่อไขข้อสงสัยเกี่ยวกับการใช้บริการ</p>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>บริการ Telemedicine เหมาะกับใคร?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><br>เหมาะสำหรับผู้ป่วยที่มีอาการไม่รุนแรง, ผู้ป่วยโรคเรื้อรังที่ต้องการติดตามอาการ,
+                                ผู้ที่ต้องการคำปรึกษาด้านสุขภาพทั่วไป หรือผู้ที่ไม่สะดวกเดินทางมาโรงพยาบาล</p>
+                        </div>
+                    </div>
 
-    <section class="services-feature section">
-        <div class="container mobile-flex-column" style="display: flex; align-items: center; gap: 40px;">
-            <div class="animate-on-scroll fade-left mobile-full-width"
-                style="flex: 1; min-width: 300px; height: 350px;">
-                <img src="assets/services-image.jpg" alt="Our Services"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-            </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>ต้องใช้อุปกรณือะไรบ้าง?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><br>คุณต้องมีสมาร์ทโฟน, แท็บเล็ต, หรือคอมพิวเตอร์ที่มีกล้อง, ไมโครโฟน
+                                และเชื่อมต่ออินเทอร์เน็ตความเร็วสูงได้</p>
+                        </div>
+                    </div>
 
-            <div class="animate-on-scroll fade-right" style="flex: 1; min-width: 300px; padding: 20px 0;">
-                <h2 class="section-title">บริการทางการแพทย์</h2>
-                <p class="about-desc" style="font-size: 18px; color: #FFFFFF; line-height: 1.6; margin-bottom: 20px;">
-                    ตั้งแต่การตรวจสุขภาพทั่วไปจนถึงการรักษาเฉพาะทาง ท่านสามารถไว้วางใจให้เราส่งมอบบริการที่มีคุณภาพ
-                    เรามีรายการบริการที่ครอบคลุมความต้องการของท่าน
-                </p>
-                <ul class="about-list"
-                    style="list-style: none; padding: 0; margin-bottom: 30px; color: #FFFFFF; font-size: 16px; line-height: 2;">
-                    <li><i class="fa-solid fa-check-circle" style="color: #3a7bd5; margin-right: 10px;"></i>
-                        งานส่งเสริมสุขภาพ</li>
-                    <li><i class="fa-solid fa-check-circle" style="color: #3a7bd5; margin-right: 10px;"></i>
-                        งานสุขาภิบาลและสิ่งแวดล้อม</li>
-                    <li><i class="fa-solid fa-check-circle" style="color: #3a7bd5; margin-right: 10px;"></i>
-                        งานควบคุมโรค
-                    </li>
-                    <li><i class="fa-solid fa-check-circle" style="color: #3a7bd5; margin-right: 10px;"></i>
-                        ออกหน่วยบริการชุมชน</li>
-                    <li><i class="fa-solid fa-check-circle" style="color: #3a7bd5; margin-right: 10px;"></i>
-                        บริการฉุกเฉิน
-                        (ร่วมกับ 1669)</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary"
-                    style="padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">ปรึกษาเรา</a>
-            </div>
-        </div>
-    </section>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>ค่าบริการเท่าไหร่ และสามารถใช้สิทธิ์ประกันได้หรือไม่?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><br>ค่าบริการจะแตกต่างกันไปขึ้นอยู่กับแผนกและแพทย์ผู้ให้คำปรึกษา
+                                กรุณาติดต่อสอบถามข้อมูลเพิ่มเติมเกี่ยวกับค่าใช้จ่ายและการใช้สิทธิ์ประกันต่างๆ
+                                กับทางโรงพยาบาลโดยตรง</p>
+                        </div>
+                    </div>
 
-    <section class="about section" id="xxxxxxx"
-        style="background-color: #112240; padding: 60px 0; color: white; font-family: sans-serif;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
-            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                <h2 class="section-title" style="font-size: 32px; color: #ffffff;">เสียงตอบรับจากผู้ใช้บริการ
-                </h2>
-                <p class="section-subtitle" style="color: #69C8FF; font-size: 18px;">
-                    คำติชมที่ทรงคุณค่า
-                </p>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>ข้อมูลของฉันปลอดภัยหรือไม่?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><br>เราใช้ระบบที่มีมาตรฐานความปลอดภัยสูงในการเก็บรักษาข้อมูลส่วนบุคคลและข้อมูลการรักษาของคุณ
+                                การสนทนาระหว่างคุณและแพทย์จะถูกเข้ารหัสเพื่อความเป็นส่วนตัวสูงสุด</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="animate-on-scroll fade-up mobile-full-width" style="
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 20px 30px; 
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.1); 
-    color: #ffffff; 
-    border-radius: 15px; 
-    font-size: clamp(1rem, 4vw, 1.25rem); 
-    text-align: left;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-">
-                "ประทับใจมากค่ะ! ทีมงานทุกคนเป็นมิตรและเป็นมืออาชีพมาก คุณหมอใจดีและอธิบายทุกอย่างชัดเจน
-                ในที่สุดก็เจอสถานพยาบาลที่ไว้ใจได้ ขอแนะนำที่นี่สำหรับทุกคนที่มองหาการดูแลสุขภาพที่ดีค่ะ"
+        </section>
+
+        <section id="contact" class="features-section" style="background: transparent;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ติดต่อเรา</h2>
+                    <p>หากคุณมีคำถามหรือต้องการข้อมูลเพิ่มเติม สามารถติดต่อเราได้ตามช่องทางด้านล่าง</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="pin"></i></div>
+                        <h3>ที่อยู่</h3>
+                        <p>35 ซ.2 ถ.ราชดำเนิน 1 ต.ในเมือง อ.เมือง จ.กำแพงเพชร 62000
+                        </p>
+                    </div>
+                    <div class=" feature-card">
+                        <div class="icon-box"><i data-lucide="phone-call"></i></div>
+                        <h3>โทรศัพท์</h3>
+                        <p>055-716-715</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="mail"></i></div>
+                        <h3>อีเมล
+                        </h3>
+                        <p>prathom_heath@gmail.com
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i data-lucide="clock"></i></div>
+                        <h3>เวลาทำการ
+                        </h3>
+                        <p>วันจันทร์ - ศุกร์, 08:30 - 16:30 น. <br> (ปิดวันหยุดราชการ)</p>
+                    </div>
+                </div>
                 <br>
-                <p style="text-align: right; margin-top: 15px; color: #69C8FF;">- จากผู้ใช้บริการ</p>
+                <div style="text-align: center; width: 100%;">
+                    <button class="btn btn-outline btn-lg" onclick="window.location.href='contact.html';">
+                        ดูข้อมูลติดต่อเพิ่มเติม</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                </div>
+                <div class="features-grid" style="display: flex; justify-content: center; width: 100%;">
+                    <div class="feature-card"
+                        style="max-width: 800px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+                        <h2>พร้อมเริ่มต้นดูแลสุขภาพของคุณแล้วหรือยัง?</h2>
+
+                        <p>ลงทะเบียนเพื่อรับบริการการแพทย์ทางไกล (Telemedicine) และนัดหมายแพทย์ผู้เชี่ยวชาญได้แล้ววันนี้
+                        </p>
+
+                        <br>
+
+                        <button class="btn btn-primary btn-lg" onclick="window.location.href='register.html';">
+                            ลงทะเบียนพบแพทย์ <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+
+    </main>
+
+    <footer class="site-footer footer-animate">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="assets/circlelogo.png" alt="logo-icon" style="width: 40px; height: 40px;">
+                <h3 class="text-gradient">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit;">โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</a>
+                </h3>
+                <p>บริการการแพทย์ทางไกล พัฒนาโดยโรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร
+                    เพื่อการเข้าถึงบริการสาธารณสุขที่สะดวกและรวดเร็ว</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/kppmu" class="social-icon" title="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kppmuch?_t=ZS-8zi6FyEyffr&_r=1" target="_blank"
+                        style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 24 24" style="fill:#acacac;">
+                            <path
+                                d="M12.53,2c0.11,4.95,3.31,8.02,8.12,8.06V14.1c-2.81-0.12-5.46-1.39-7.31-3.41l0,8.16c0,4.14-3.36,7.5-7.5,7.5 c-4.14,0-7.5-3.36-7.5-7.5c0-4.14,3.36-7.5,7.5-7.5c0.5,0,0.98,0.05,1.44,0.15l0,4.2c-0.45-0.1-0.92-0.15-1.44-0.15 c-1.82,0-3.3,1.48-3.3,3.3c0,1.82,1.48,3.3,3.3,3.3c1.82,0,3.3-1.48,3.3-3.3l0-14.82L12.53,2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-        </div>
-        </div>
-        </div>
-    </section>
-
-    <style>
-        /* สร้าง Animation ให้เนื้อหาค่อยๆ เลือนปรากฏขึ้น */
-        details[open] .content-animation {
-            animation: fadeIn 0.4s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* เพิ่ม Effect เวลาเอาเมาส์ชี้ (Hover) */
-        summary:hover {
-            background: rgba(255, 255, 255, 0.1) !important;
-            transition: 0.3s;
-        }
-
-        /* หมุนลูกศรเวลาเปิด */
-        details[open] summary span {
-            transform: rotate(180deg);
-            transition: 0.3s;
-        }
-    </style>
-
-    <section class="about section" id="questions">
-        <div class="container about-container"
-            style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto;">
-
-            <div class="about-content" style="width: 100%;">
-                <h2 class="section-title" style="margin-bottom: 30px;">คำถามที่พบบ่อย</h2>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        สามารถขอใบรับรองแพทย์เพื่อใช้ในราชการที่โรงพยาบาลได้หรือไม่?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: ได้ค่ะ หากใช้แบบฟอร์มของทางเรา สามารถขอใบรับรองแพทย์ได้ทันทีค่ะ
-                        แต่หากเป็นแบบฟอร์มจากหน่วยงานอื่น กรุณาให้เจ้าหน้าที่ตรวจสอบก่อน
-                        เพื่อพิจารณาความเหมาะสมในการออกใบรับรองค่ะ
-                    </div>
-                </details>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        สามารถขอใบรับรองแพทย์ได้มากกว่าหนึ่งฉบับหรือไม่?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: ได้ค่ะ ใบแรก 80 บาทใบถัดไปเพิ่มใบละ 30 บาท
-                    </div>
-                </details>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        โรงพยาบาลเปิดให้บริการในวันเสาร์-อาทิตย์หรือไม่?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: ทางเราปิดให้บริการในวันเสาร์ วันอาทิตย์ และวันหยุดนักขัตฤกษ์ค่ะ
-                    </div>
-                </details>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        ในวันทำการปกติ โรงพยาบาลเปิดให้บริการถึงเวลาใด?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: คุณหมอจะตรวจตั้งแต่ 08:30 น. ถึง 12.00 น. แต่จะรับคิวตรวจถึง 11.30 น. ค่ะ
-                    </div>
-                </details>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        สามารถจองคิวนวดกับทางโรงพยาบาลได้หรือไม่?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: รบกวนโทรติดต่อที่ 055714924 ค่ะ
-                    </div>
-                </details>
-
-                <details name="faq"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid #3a7bd5; border-radius: 8px; margin-bottom: 15px; text-align: left; overflow: hidden;">
-                    <summary
-                        style="padding: 15px; cursor: pointer; font-weight: bold; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        ไม่ทราบว่าทางนี้มีกำหนดการฉีดวัคซีนสำหรับเด็ก ในวันที่ เท่าใดคะ?
-                        <span style="color: #3a7bd5;">▼</span>
-                    </summary>
-                    <div
-                        style="padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color:#b8b8b8">
-                        ตอบ: สัปดาห์ที่ 2 และสัปดาห์ที่ 4 ของทุกเดือน ในวันพฤหัสบดี ช่วงบ่ายค่ะ
-                        สามารถติดต่อสอบถามเพิ่มเติมได้ที่หมายเลข โทรศัพท์ 055-716715
-                    </div>
-                </details>
-
-                <a href="#contact" class="btn btn-primary"
-                    style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #3a7bd5; color: white; border-radius: 5px; text-decoration: none;">ปรึกษาเราเพิ่มเติม</a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- contact Section -->
-    <section class="contact-feature section" id="contact">
-        <div class="container mobile-flex-column" style="display: flex; align-items: center; gap: 40px;">
-            <div class="animate-on-scroll fade-left mobile-full-width"
-                style="flex: 1; min-width: 350px; height: 400px;">
-                <img src="assets/contact-us.jpg" alt="Contact Us"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <div class="footer-links">
+                <h4>เมนูหลัก</h4>
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="Whatis.html">Telemedicine คืออะไร?</a></li>
+                    <li><a href="terms.html">ข้อตกลงและเงื่อนไข</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                    <li><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
             </div>
 
-            <div class="animate-on-scroll fade-right" style="flex: 1; min-width: 300px; padding: 20px 0;">
-                <h2 class="section-title">ติดต่อเรา</h2>
-
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-phone-alt"></i>
-                        <span><strong>โทรศัพท์ :</strong> 055-716715</span>
-                    </li>
-                    <li><i class="fa-solid fa-envelope"></i>
-                        <span><strong> อีเมล :</strong> prathomhealth@gmail.com</span>
-                    </li>
-                    <li><i class="fa-solid fa-map-marker-alt"></i>
-                        <span><strong>ที่อยู่ :</strong> 35 ซ.2 ถ.ราชดำเนิน 1 ต.ในเมือง อ.เมืองกำแพงเพชร จ.กำแพงเพชร
-                            62000</span>
-                    </li>
-                    <li><i class="fab fa-facebook-f"></i>
-                        <span><strong> Facebook : </strong> <a href="https://www.facebook.com/kmch.kpp" target="_blank"
-                                style="color: #ffffff; text-decoration: underline;">โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร</a></span>
-                    </li>
-                    <li><i class="fab fa-line"></i>
-                        <span><strong>Line : </strong> @133rkonx</span>
-                    </li>
-                    <li><i class="fa-solid fa-clock"></i>
-                        <span><strong>เวลา : </strong> ในวัน-เวลาราชการเท่านั้น</span>
-                    </li>
+            <div class="footer-links">
+                <h4>ติดต่อ</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/NzzFctVAZoiXyLbMA"><strong>ที่อยู่:</strong> 35 ซ.2
+                            ถ.ราชดำเนิน 1 ต.ในเมือง อ.เมือง จ.กำแพงเพชร
+                            62000</a></li>
+                    <li><a href="tel:055716715"><strong>โทร:</strong> 055-716-715</a></li>
                 </ul>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-text">
-                            โรงพยาบาลชุมชน <span class="highlight">เทศบาลเมืองกำแพงเพชร</span>
-                        </span>
-                    </a>
-                    <p style="color: #FFFFFF; font-size: 16px;"><strong>ลิงก์ด่วน</strong></p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">หน้าแรก</a>
-                    <a href="About.html">เกี่ยวกับเรา</a>
-                    <a href="organizationalStructure.html">โครงสร้างองค์กร</a>
-                    <a href="#contact">ติดต่อเรา</a>
-                    <a href="#questions">คำถามที่พบบ่อย</a>
-                </div>
-                <p style="color: #FFFFFF; font-size: 16px;"><strong>บริการของเรา</strong></p>
-                <div class="footer-links">
-                    <a href="GeneralSchedule.html">ตารางตรวจโรคทั่วไป</a>
-                    <a href="HealthSchedule.html">ตารางแพทย์แผนจีน</a>
-                    <a href="Thai&AltSchedule.html">ตารางแพทย์แผนไทย</a>
-                    <a href="https://telemedicine-kppmch.vercel.app/">ลงทะเบียน Telemedicine</a>
-                    <a href="https://kppmch-pregnantt.vercel.app/">คลินิกฝากครรภ์</a>
-                </div>
-
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/kmch.kpp"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@kppmuch"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://line.me/R/ti/p/@614lwjzc?ts=12231156&oat_content=url"><i
-                            class="fab fa-line"></i></a>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p style="font-size: 13px; color: #aab; margin-bottom: 4px;">หรือที่รู้จักในชื่อ: อนามัยวัดคูยาง |
-                    อนามัย รร.วัดคูยาง | KPPmch</p>
-                <p>&copy; 2025 โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร. All Rights Reserved.</p>
+                <p>ลิขสิทธิ์ © 2569 โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร | สงวนลิขสิทธิ์</p>
             </div>
         </div>
     </footer>
 
-
-    <!-- Line QR Code Popup -->
-    <div id="line-popup" class="line-popup">
-        <div class="line-popup-content">
-            <button id="close-popup" class="close-popup" aria-label="Close popup">&times;</button>
-            <div class="line-popup-header">
-                <i class="fab fa-line"></i>
-                <span>เพิ่มเพื่อนใน Line</span>
-            </div>
-            <img src="assets/QRcodeline.png" alt="Line QR Code" class="line-qr-img">
-            <p class="line-popup-text">
-                สแกน QR Code หรือเพิ่มเพื่อนผ่าน ID:<br>
-                <span class="line-id">@133rkonx</span>
-            </p>
-            <a href="https://line.me/R/ti/p/@133rkonx" target="_blank" class="btn-line">
-                <i class="fab fa-line"></i> กดเพื่อเพิ่มเพื่อน
-            </a>
-        </div>
-    </div>
-
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
