@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- หน้าหลัก - ความสำคัญสูงสุด -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- หน้าเกี่ยวกับเรา -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/About.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- หน้าโครงสร้างองค์กร -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/organizationalStructure.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- หน้าตารางตรวจโรคทั่วไป -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/GeneralSchedule.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- หน้าตารางแพทย์แผนจีน -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/HealthSchedule.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- หน้าตารางแพทย์แผนไทยและทางเลือก -->
+  <url>
+    <loc>https://kppmch-main.vercel.app/Thai&amp;AltSchedule.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
