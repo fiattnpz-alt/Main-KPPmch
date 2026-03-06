@@ -1,9 +1,0 @@
-# robots.txt สำหรับ โรงพยาบาลชุมชนเทศบาลเมืองกำแพงเพชร (อนามัยวัดคูยาง)
-# https://kppmch-main.vercel.app
-
-# อนุญาตให้ทุก search engine เข้า crawl ได้ทั้งหมด
-User-agent: *
-Allow: /
-
-# ระบุ Sitemap เพื่อให้ Google และ Bing หาเจอง่ายขึ้น
-Sitemap: https://kppmch-main.vercel.app/sitemap.xml
