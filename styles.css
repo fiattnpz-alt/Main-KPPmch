@@ -266,6 +266,8 @@ p {
 
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 50px;
 }
 
@@ -687,8 +689,9 @@ p {
 
     .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         width: 100%;
+        align-items: center;
     }
 
     .btn {
