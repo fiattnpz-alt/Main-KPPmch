@@ -1,3 +1,13 @@
 {
-    "cleanUrls": true
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/((?!images|assets|js|css).*)",
+            "dest": "/$1.html"
+        }
+    ]
 }
